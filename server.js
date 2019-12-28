@@ -10,14 +10,14 @@ const path = require('path');
 const hbs = require('express-handlebars');
 
 app.use('/public', express.static(process.cwd() + '/public'));
-app.use(bodyparser.urlencoded({extended:false}));
+app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 
 // view engine setup
-app.set('views',path.join(__dirname,'views'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', '.hbs');
 
-app.engine('.hbs', hbs( {
+app.engine('.hbs', hbs({
   extname: '.hbs',
   defaultView: 'default',
   defaultLayout: 'main',
@@ -27,16 +27,17 @@ app.engine('.hbs', hbs( {
 
 // routes
 app.get('/', (req, res) => {
-    res.render('index', {
-      content:'Hello From Otherside'
-    });
+  var data = fs.readFileSync(__dirname + '/data/resume.json', 'utf8');
+  var resume = JSON.parse(data);
+  // console.log(resume.skills); 
+  res.render('index', { resume });
 })
 
 app.get('/json', (req, res) => {
   var data = fs.readFileSync(__dirname + '/data/resume.json', 'utf8');
   var resume = JSON.parse(data);
   // console.log(resume); 
-  res.send(resume); 
+  res.send(resume);
 })
 
 
@@ -44,4 +45,4 @@ var port = process.env.PORT || 3000;
 app.listen(port, function () {
   console.log('app started');
 });
-  
+

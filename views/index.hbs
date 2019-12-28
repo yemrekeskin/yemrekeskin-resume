@@ -1,19 +1,23 @@
- <div id="resume">
+<div id="resume">
 
-    {{> basic }}
-    {{> skills }}
-    {{> work }}
-    {{> volunteer }}
-    {{> education }}
-    {{> awards }}
-    {{> publications }}
-    {{> languages }}
-    {{> interests }}
-    {{> references }}
+   {{> basic }}
 
-    
+   {{#if true }}
+      {{> skills skills=resume.skills }}
+   {{/if}}
+
+   {{> work }}
+   {{> volunteer }}
+   {{> education }}
+   {{> awards }}
+   {{> publications }}
+   {{> languages }}
+   {{> interests }}
+   {{> references }}
+
+
    <div style="text-align: center;">
       Made with <span style="color: #e74c3c;">❤</span> in Istanbul
    </div>
 
- </div>
+</div>

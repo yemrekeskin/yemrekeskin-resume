@@ -58,17 +58,17 @@
           "React",
           "Redux / Apollo"
         ],
-        "level": "Senior",
+        "level": "beginner",
         "name": "Frontend"
       },
       {
         "keywords": ["Node", "Ruby", "Postgres", "Redis", "Serverless"],
-        "level": "Senior",
+        "level": "intermediate",
         "name": "Backend"
       },
       {
         "keywords": ["AWS", "G Cloud", "Heroku", "Caching"],
-        "level": "Senior",
+        "level": "master",
         "name": "Devops"
       }
     ],
