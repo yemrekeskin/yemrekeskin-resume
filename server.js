@@ -1,12 +1,17 @@
 'use strict';
 
+const fs = require('fs');
+const bodyparser = require('body-parser');
+
 const express = require('express');
-var app = express();
+const app = express();
 
 const path = require('path');
 const hbs = require('express-handlebars');
 
 app.use('/public', express.static(process.cwd() + '/public'));
+app.use(bodyparser.urlencoded({extended:false}));
+app.use(bodyparser.json());
 
 // view engine setup
 app.set('views',path.join(__dirname,'views'));
@@ -25,6 +30,13 @@ app.get('/', (req, res) => {
     res.render('index', {
       content:'Hello From Otherside'
     });
+})
+
+app.get('/json', (req, res) => {
+  var data = fs.readFileSync(__dirname + '/data/resume.json', 'utf8');
+  var resume = JSON.parse(data);
+  // console.log(resume); 
+  res.send(resume); 
 })
 
 
