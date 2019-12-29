@@ -27,10 +27,15 @@ app.engine('.hbs', hbs({
 
 // routes
 app.get('/', (req, res) => {
+ 
+  res.render('index', {layout: false});
+})
+
+app.get('/resume', (req, res) => {
   var data = fs.readFileSync(__dirname + '/data/resume.json', 'utf8');
   var resume = JSON.parse(data);
   // console.log(resume.languages); 
-  res.render('index', { resume });
+  res.render('resume', { resume });
 })
 
 app.get('/json', (req, res) => {

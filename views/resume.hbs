@@ -1,0 +1,44 @@
+<div id="resume">
+
+   {{> basic }}
+
+   {{#if resume.skills }}
+   {{> skills skills=resume.skills }}
+   {{/if}}
+
+   {{> work }}
+
+   {{#if resume.volunteer }}
+   {{> volunteer volunteers = resume.volunteer}}
+   {{/if}}
+
+   {{#if resume.education}}
+   {{> educations educations = resume.education }}
+   {{/if}}
+
+   {{#if resume.awards}}
+   {{> awards awards = resume.awards }}
+   {{/if}}
+
+   {{#if resume.publications}}
+   {{> publications publications = resume.publications}}
+   {{/if}}
+
+   {{#if resume.languages }}
+   {{> languages languages=resume.languages }}
+   {{/if}}
+
+   {{#if resume.interests}}
+   {{> interests interests=resume.interests}}
+   {{/if}}
+
+
+   {{#if resume.references }}
+   {{> references references=resume.references }}
+   {{/if}}
+
+   <div style="text-align: center;">
+      Made with <span style="color: #e74c3c;">❤</span> in Istanbul
+   </div>
+
+</div>

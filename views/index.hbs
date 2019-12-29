@@ -1,44 +1,23 @@
-<div id="resume">
+<!doctype html>
+<html lang="en">
 
-   {{> basic }}
+<head>
 
-   {{#if resume.skills }}
-   {{> skills skills=resume.skills }}
-   {{/if}}
+   <meta charset="UTF-8">
+   <meta name="description" content="yemrekeskin">
+   <meta name="keywords" content="resume,portfolio">
+   <meta name="author" content="Yunus Emre Keskin">
+   <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
 
-   {{> work }}
+   <title>Yunus Emre Keskin</title>
+   <link rel="icon" type="image/png" href="../../public/favicon.png">
 
-   {{#if resume.volunteer }}
-   {{> volunteer volunteers = resume.volunteer}}
-   {{/if}}
+</head>
 
-   {{#if resume.education}}
-   {{> educations educations = resume.education }}
-   {{/if}}
+<body>
 
-   {{#if resume.awards}}
-   {{> awards awards = resume.awards }}
-   {{/if}}
+Hello World
 
-   {{#if resume.publications}}
-   {{> publications publications = resume.publications}}
-   {{/if}}
+</body>
 
-   {{#if resume.languages }}
-   {{> languages languages=resume.languages }}
-   {{/if}}
-
-   {{#if resume.interests}}
-   {{> interests interests=resume.interests}}
-   {{/if}}
-
-
-   {{#if resume.references }}
-   {{> references references=resume.references }}
-   {{/if}}
-
-   <div style="text-align: center;">
-      Made with <span style="color: #e74c3c;">❤</span> in Istanbul
-   </div>
-
-</div>
+</html>
