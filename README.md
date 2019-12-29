@@ -1,4 +1,4 @@
-## yemrekeskin.com/resume
+## ResumePage <img src="https://raw.githubusercontent.com/yemrekeskin/yemrekeskin-resume/master/public/favicon.png">
    Resume page is based on **jsonresume** schema.
    See included **data/resume.json** for more details.
 
