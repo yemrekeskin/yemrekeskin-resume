@@ -26,8 +26,7 @@ app.engine('.hbs', hbs({
 }));
 
 // routes
-app.get('/', (req, res) => {
- 
+app.get('/', (req, res) => { 
   res.render('index', {layout: false});
 })
 
@@ -45,7 +44,12 @@ app.get('/json', (req, res) => {
   res.send(resume);
 })
 
+app.get('/old', (req, res) => { 
+  res.render('old', {layout: false});
+})
 
+
+// App Server
 var port = process.env.PORT || 3000;
 app.listen(port, function () {
   console.log('app started');
