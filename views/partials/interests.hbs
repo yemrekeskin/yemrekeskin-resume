@@ -3,14 +3,21 @@
         <h2 class='section-title' class='section-title'>Interests</h2>
       </header>
       <section id="interests">
+
+        {{#each interests}}
         <div class="item">
           <h3 class="name">
-            Wildlife
+            {{ name }}
           </h3>
+          {{#if keywords.length }}
           <ul class="keywords">
-            <li>Ferrets</li>
-            <li>Unicorns</li>
+            {{#each keywords }}
+              <li> {{.}} </li>
+            {{/each}}
           </ul>
+          {{/if}}
         </div>
+        {{/each}}
+
       </section>
     </section>

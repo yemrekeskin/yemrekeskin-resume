@@ -1,0 +1,47 @@
+<section class="section">
+  <header>
+    <h2 class='section-title'>Education <span class="item-count">({{educations.length}})</span></h2>
+  </header>
+  <section id="education">
+
+    {{#each educations}}
+
+    <section class="education-item">
+      <header>
+        <div class="header-left">
+          <div class="studyType">
+            {{studyType}}
+          </div>
+          <div class="area">
+            {{area}}
+          </div>
+          <div class="institution">
+            {{institution}}
+          </div>
+        </div>
+        <div class="date">
+          <span class="startDate">
+            {{startDate}}
+          </span>
+          <span class="endDate">
+            {{endDate}}
+          </span>
+        </div>
+      </header>
+      <ul class="courses">
+        {{#each courses}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+      <div class="item">
+        <div class='gpa'>
+          <strong> Grade:</strong> <span>{{gpa}}</span>
+        </div>
+      </div>
+    </section>
+    {{/each}}
+
+
+
+  </section>
+</section>

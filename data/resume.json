@@ -28,7 +28,22 @@
         "startDate": "2008-02-12",
         "area": "Software Engineering (incomplete)",
         "studyType": "Bachelors",
-        "institution": "The University of Queensland"
+        "institution": "The University of Queensland",
+        "gpa": "4.0",
+        "courses": [
+          "DB1101 - Basic SQL"
+        ]
+      },
+      {
+        "endDate": "2009-12-12",
+        "startDate": "2008-02-12",
+        "area": "Software Engineering (incomplete)",
+        "studyType": "Bachelors",
+        "institution": "The University of Queensland",
+        "gpa": "4.0",
+        "courses": [
+          "DB1101 - Basic SQL"
+        ]
       }
     ],
     "references": [
@@ -75,7 +90,9 @@
     "awards": [
       {
         "title": "Defender of the Internet",
-        "awarder": "Fight For The Future"
+        "awarder": "Fight For The Future",
+        "date": "2014-11-01",
+        "summary": "There is no spoon."
       }
     ],
     "work": [
@@ -202,21 +219,49 @@
         "startDate": "2011-01-01"
       }
     ],
-    "meta": {
-      "theme": "elegant"
-    },
+    "publications": [{
+      "name": "Video compression for 3d media",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "website": "http://publication.com",
+      "summary": "Innovative middle-out compression algorithm that changes the way we store data."
+    }],
+    "languages": [{
+      "language": "English",
+      "fluency": "Native speaker"
+    }],
+    "volunteer": [{
+      "organization": "Organization",
+      "position": "Volunteer",
+      "website": "http://organization.com/",
+      "startDate": "January 2012",
+      "endDate": "January 2013",
+      "summary": "Global movement of free coding clubs for young people.",
+      "highlights": [
+        "Awarded 'Volunteer of the Month'"
+      ]
+    }],
     "interests": [
       {
-        "name": "Gardening"
+        "name": "Gardening",
+        "keywords": [
+          "Ferrets",
+          "Unicorns"
+        ]
       },
       {
-        "name": "Music"
+        "name": "Music",
+        "keywords": [
+          "Ferrets",
+          "Unicorns"
+        ]
       },
       {
-        "name": "Reading"
-      },
-      {
-        "name": "Open Source"
+        "name": "Reading",
+        "keywords": [
+          "Ferrets",
+          "Unicorns"
+        ]
       }
     ]
   }

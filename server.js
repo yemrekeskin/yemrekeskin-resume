@@ -29,7 +29,7 @@ app.engine('.hbs', hbs({
 app.get('/', (req, res) => {
   var data = fs.readFileSync(__dirname + '/data/resume.json', 'utf8');
   var resume = JSON.parse(data);
-  // console.log(resume.skills); 
+  // console.log(resume.languages); 
   res.render('index', { resume });
 })
 
