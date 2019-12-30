@@ -1,12 +1,16 @@
 <div id="resume">
 
-   {{> basic }}
+   {{#if resume.basics }}
+   {{> basic basics = resume.basics}}
+   {{/if}}
 
    {{#if resume.skills }}
    {{> skills skills=resume.skills }}
    {{/if}}
 
-   {{> work }}
+   {{#if resume.work }}
+   {{> work  works = resume.work}}
+   {{/if }}
 
    {{#if resume.volunteer }}
    {{> volunteer volunteers = resume.volunteer}}

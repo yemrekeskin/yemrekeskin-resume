@@ -1,35 +1,44 @@
- <section class="section">
+<section class="section">
+  <header>
+    <h2 class='section-title'>Work Experience <span class="item-count">(1)</span></h2>
+  </header>
+
+  <section id="work">
+
+    {{#each works}}
+
+    <section class="work-item">
+      <input id="work-item-0" type="checkbox" class="toggle-item" checked="checked" />
+      <label for="work-item-0"></label>
       <header>
-        <h2 class='section-title'>Work Experience <span class="item-count">(1)</span></h2>
+        <div class="position"> {{position}} </div>
+        <div class="company">{{company}}</div>
+        <div class="date">
+          <span class="startDate">{{startDate}}</span>
+          <span class="endDate">- {{endDate}}</span>
+        </div>
       </header>
-    
-      <section id="work">
-        <section class="work-item">
-    
-            <input id="work-item-0" type="checkbox" class="toggle-item" checked="checked" />
-            <label for="work-item-0"></label>
-    
-    			<header>
-    				<div class="position">CEO/President</div>
-    				<div class="company">Pied Piper</div>
-    				<div class="date">
-    				  <span class="startDate">December 2013</span> 
-    					<span class="endDate">- December 2014</span> 
-    				</div>
-    			</header>
-    			
-        	<span class="website">
-        		<a target="_blank" href="http://piedpiper.com">http://piedpiper.com</a>
-        	</span>      	<div class="item" id="work-item">
-            <div class="summary">
-              <p><p>Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.</p></p>
-            </div>
-            <ul class="highlights">
-                <li><p>Build an algorithm for artist to detect if their music was violating copy right infringement laws</p></li>
-                <li><p>Successfully won Techcrunch Disrupt</p></li>
-                <li><p>Optimized an algorithm that holds the current world record for Weisman Scores</p></li>
-            </ul>
-        	</div>
-        </section>
-      </section>
+      <span class="website">
+        <a target="_blank" href="{{website}}">{{website}}</a>
+      </span>
+      <div class="item" id="work-item">
+        <div class="summary">
+          <p>
+            <p>{{ summary }} </p>
+          </p>
+        </div>
+        <ul class="highlights">
+          {{#each highlights}}
+          <li>
+            <p> {{ this}} </p>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
     </section>
+
+    {{/each}}
+
+
+  </section>
+</section>

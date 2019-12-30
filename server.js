@@ -33,16 +33,27 @@ app.get('/', (req, res) => {
 app.get('/resume', (req, res) => {
   var data = fs.readFileSync(__dirname + '/data/resume.json', 'utf8');
   var resume = JSON.parse(data);
-  // console.log(resume.languages); 
+  // console.log(resume.basics); 
   res.render('resume', { resume });
 })
 
-app.get('/json', (req, res) => {
+app.get('/resume/json', (req, res) => {
   var data = fs.readFileSync(__dirname + '/data/resume.json', 'utf8');
   var resume = JSON.parse(data);
   // console.log(resume); 
   res.send(resume);
 })
+
+app.get('/resume/pdf', function (req, res) {
+  
+  var filePath = "/public/resume.pdf";
+  
+  fs.readFile(__dirname + filePath , function (err,data){
+      res.contentType("application/pdf");
+      res.send(data);
+  });
+
+});
 
 app.get('/old', (req, res) => { 
   res.render('old', {layout: false});

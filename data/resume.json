@@ -5,6 +5,7 @@
       "summary": "I’m a full stack web developer who can build apps from the ground up. I've worked mostly at startups so I am use to wearing many hats. I am a very product focussed developer who priotizes user feedback first and foremost. I'm generally very flexible when investigating new roles. ",
       "website": "https://ajaxdavis.com",
       "email": "thomasalwyndavis@gmail.com",
+      "phone":"0543-506-3818",
       "location": {
         "city": "Melbourne",
         "countryCode": "AU"
@@ -103,6 +104,7 @@
         "location": "Melbourne",
         "position": "Senior Javascript Developer",
         "startDate": "2018-03-01",
+        "endDate": "2018-03-01",
         "highlights": [
           "React, Apollo, Styled Components",
           "Node.js / Rails",

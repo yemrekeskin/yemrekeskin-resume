@@ -9,6 +9,12 @@
    - Environments
       - **Dev** Environment : [https://yemrekeskin.herokuapp.com/](https://yemrekeskin.herokuapp.com/)
       - **Prod** Environment: [https://yemrekeskin.com/resume/](https://yemrekeskin.com/resume/)
+## Links
+   - old version : http://localhost:3000/old
+   - new version : http://localhost:3000/
+   - resume : http://localhost:3000/resume
+   - resume data json   : http://localhost:3000/resume/json
+   - resume pdf version : http://localhost:3000/resume/pdf
 
 ## Useful Links
    - [https://jsonresume.org/schema/](https://jsonresume.org/schema/)
