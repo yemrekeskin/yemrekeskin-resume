@@ -1,24 +1,24 @@
 {
     "basics": {
-      "name": "Thomas Davis",
-      "label": "Web Developer",
+      "name": "Yunus Emre Keskin",
+      "label": "Tech Lead, Senior Software Engineer",
       "summary": "I’m a full stack web developer who can build apps from the ground up. I've worked mostly at startups so I am use to wearing many hats. I am a very product focussed developer who priotizes user feedback first and foremost. I'm generally very flexible when investigating new roles. ",
-      "website": "https://ajaxdavis.com",
-      "email": "thomasalwyndavis@gmail.com",
+      "website": "http://yemrekeskin.com",
+      "email": "yemrekeskin@gmail.com",
       "phone":"0543-506-3818",
       "location": {
-        "city": "Melbourne",
-        "countryCode": "AU"
+        "city": "Istanbul",
+        "countryCode": "TR"
       },
       "profiles": [
         {
-          "username": "ajaxdavis",
-          "url": "https://twitter.com/ajaxdavis",
+          "username": "yemrekeskin",
+          "url": "https://twitter.com/yemrekeskin",
           "network": "twitter"
         },
         {
-          "url": "https://github.com/thomasdavis",
-          "username": "thomasdavis",
+          "url": "https://github.com/yemrekeskin",
+          "username": "yemrekeskin",
           "network": "github"
         }
       ]
