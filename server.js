@@ -4,20 +4,20 @@ const fs = require('fs');
 const bodyparser = require('body-parser');
 
 const express = require('express');
-const app = express();
+const server = express();
 
 const path = require('path');
 const hbs = require('express-handlebars');
 
-app.use('/public', express.static(process.cwd() + '/public'));
-app.use(bodyparser.urlencoded({ extended: false }));
-app.use(bodyparser.json());
+server.use('/assets', express.static(process.cwd() + '/assets'));
+server.use(bodyparser.urlencoded({ extended: false }));
+server.use(bodyparser.json());
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', '.hbs');
+server.set('views', path.join(__dirname, 'views'));
+server.set('view engine', '.hbs');
 
-app.engine('.hbs', hbs({
+server.engine('.hbs', hbs({
   extname: '.hbs',
   defaultView: 'default',
   defaultLayout: 'main',
@@ -26,27 +26,27 @@ app.engine('.hbs', hbs({
 }));
 
 // routes
-app.get('/', (req, res) => { 
+server.get('/', (req, res) => { 
   res.render('index', {layout: false});
 })
 
-app.get('/resume', (req, res) => {
+server.get('/resume', (req, res) => {
   var data = fs.readFileSync(__dirname + '/data/resume.json', 'utf8');
   var resume = JSON.parse(data);
   // console.log(resume.basics); 
   res.render('resume', { resume });
 })
 
-app.get('/resume/json', (req, res) => {
+server.get('/resume/json', (req, res) => {
   var data = fs.readFileSync(__dirname + '/data/resume.json', 'utf8');
   var resume = JSON.parse(data);
   // console.log(resume); 
   res.send(resume);
 })
 
-app.get('/resume/pdf', function (req, res) {
+server.get('/resume/pdf', function (req, res) {
   
-  var filePath = "/public/resume.pdf";
+  var filePath = "/files/resume.pdf";
   
   fs.readFile(__dirname + filePath , function (err,data){
       res.contentType("application/pdf");
@@ -55,14 +55,14 @@ app.get('/resume/pdf', function (req, res) {
 
 });
 
-app.get('/old', (req, res) => { 
+server.get('/old', (req, res) => { 
   res.render('old', {layout: false});
 })
 
 
 // App Server
 var port = process.env.PORT || 3000;
-app.listen(port, function () {
+server.listen(port, function () {
   console.log('app started');
 });
 
