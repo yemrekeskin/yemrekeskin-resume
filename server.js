@@ -13,7 +13,7 @@ server.use('/assets', express.static(process.cwd() + '/assets'));
 server.use(bodyparser.urlencoded({ extended: false }));
 server.use(bodyparser.json());
 
-// view engine setup
+// ********** view engine setup
 server.set('views', path.join(__dirname, 'views'));
 server.set('view engine', '.hbs');
 
@@ -25,9 +25,9 @@ server.engine('.hbs', hbs({
   partialsDir: __dirname + '/views/partials/'
 }));
 
-// routes
-server.get('/', (req, res) => { 
-  res.render('index', {layout: false});
+// *********** routes
+server.get('/', (req, res) => {
+  res.render('index', { layout: false });
 })
 
 server.get('/resume', (req, res) => {
@@ -45,22 +45,22 @@ server.get('/resume/json', (req, res) => {
 })
 
 server.get('/resume/pdf', function (req, res) {
-  
+
   var filePath = "/files/resume.pdf";
-  
-  fs.readFile(__dirname + filePath , function (err,data){
-      res.contentType("application/pdf");
-      res.send(data);
+
+  fs.readFile(__dirname + filePath, function (err, data) {
+    res.contentType("application/pdf");
+    res.send(data);
   });
 
 });
 
-server.get('/old', (req, res) => { 
-  res.render('old', {layout: false});
+server.get('/old', (req, res) => {
+  res.render('old', { layout: false });
 })
 
 
-// App Server
+// ****** App Server
 var port = process.env.PORT || 3000;
 server.listen(port, function () {
   console.log('app started');
